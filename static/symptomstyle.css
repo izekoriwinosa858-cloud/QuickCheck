@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    background-color: #0f172a;
+   
+}
+img{
+    width: 190px;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav ul li a{
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    background-color: #f1f5f9;
+}
+/* HERO BACKGROUND */
+.symptoms-hero {
+    position: relative;
+    min-height: 100vh; 
+    box-sizing: border-box; /* VERY IMPORTANT */
+    
+   background-image: url("/static/img/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+}
+/* DARK OVERLAY */
+.symptoms-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: linear-gradient(
+    rgba(15, 23, 42, 0.85),
+    rgba(15, 23, 42, 0.2)
+    );
+}
+/* CARD */
+.symptoms-card {
+    position: relative;
+    z-index: 1;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+
+    padding: 30px;
+    border-radius: 16px;
+
+    width: 100%;
+   max-width: 420px;
+    color: white;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
+    animation: fadeUp 1s ease;
+    margin: auto;
+}
+/* TITLE */
+.symptoms-card h2 {
+    margin-bottom: 5px;
+}
+
+/* SUBTEXT */
+.sub-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #cbd5f5;
+}
+/* GRID */
+.symptom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+/* LABEL BOX */
+.symptom-grid label {
+    background: rgba(255,255,255,0.05);
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* HOVER EFFECT */
+.symptom-grid label:hover {
+    background: rgba(34, 197, 94, 0.2);
+}
+/* BUTTON */
+.symptoms-card button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+
+    background: linear-gradient(135deg, #22c55e, #0ea5e9);
+    border: none;
+    border-radius: 10px;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: transparent;
+    z-index: 0;
+    overflow: hidden;
+}
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+
+    box-shadow:
+        10px 50px white,
+        80px 120px white,
+        200px 300px white,
+        400px 80px white,
+        600px 200px white,
+        900px 100px white,
+        1200px 350px white,
+        1400px 220px white,
+        1600px 400px white;
+    animation: moveStars 20s linear infinite;
+}
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+
+    box-shadow:
+        100px 300px white,
+        200px 500px white,
+        400px 150px white,
+        600px 350px white,
+        800px 250px white,
+        1000px 450px white,
+        1200px 200px white;
+
+    animation: moveStars 40s linear infinite;
+}
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}
+/* OPTIONAL TEXT */
+.optional-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cbd5f5;
+}
+/* TEXTAREA */
+textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: none;
+
+    background: rgba(255,255,255,0.05);
+    color: white;
+
+    resize: none;
+    height: 50px;
+
+    outline: none;
+    transition: 0.3s;
+}
+/* TEXTAREA FOCUS EFFECT */
+textarea:focus {
+    background: rgba(255,255,255,0.08);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+}
+
+/* PLACEHOLDER COLOR */
+textarea::placeholder {
+    color: #94a3b8;
+}

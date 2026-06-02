@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - QuickCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='resultstyle.css') }}">
+</head>
+<body>
+     <nav>
+       <img src="{{ url_for('static', filename='img/quickcheck.png') }}">
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/symptoms">Symptoms Checker</a></li>
+
+            <li><a href="/features">Features</a></li>
+
+           <li><a href="/about">About</a></li>
+
+           <li><a href="/contact">Contact</a></li>
+        </ul>
+
+    </nav>
+        <!-- HERO BACKGROUND -->
+    <section class="result-hero">
+        <div class="stars"></div>
+
+        <div class="result-container">
+
+            <!-- TITLE -->
+            <h1>Your Health Result</h1>
+            
+            <!-- SELECTED SYMPTOMS -->
+        <div class="card symptoms-card">
+
+         <h2>🧾 Selected Symptoms</h2>
+
+          <ul class="symptom-list">
+           {% for symptom in symptoms %}
+           <li>{{ symptom }}</li>
+           {% endfor %}
+          </ul>
+
+         </div>
+            <!-- MEDICAL ADVICE (FROM YOU / FLASK LATER) -->
+        <div class="card advice">
+
+          <h2>🩺 Medical Advice</h2>
+
+          <ul class="advice-list">
+
+            {% for item in advice %}
+
+          <li>{{ item }}</li>
+
+           {% endfor %}
+
+          </ul>
+
+        </div>
+
+            <!-- AI SUMMARY -->
+
+<div class="card ai">  
+
+    <h2>🤖 QuickCheck Summary</h2>
+
+    <p>
+        The advice above is based on the symptoms you selected.
+        QuickCheck provides general health information to help
+        users understand common symptoms and basic self-care steps.
+    </p>
+
+    <small>
+        ⚠ This information is for educational purposes only and is not a medical diagnosis.
+        If symptoms become severe, persistent, or concerning, seek professional medical care.
+    </small>
+
+</div>
+
+        </div>
+    </section>
+
+
+</body>
+</html>

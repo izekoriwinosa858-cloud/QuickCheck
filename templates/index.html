@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='indexstyle.css') }}">
+</head>
+<body>
+    <nav>
+        <img src="{{ url_for('static', filename='img/quickcheck.png') }}">
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/symptoms">Symptoms Checker</a></li>
+
+            <li><a href="/features">Features</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section class="hero">
+        
+        <div class="stars"></div>
+        
+        <div class="hero-content">
+        <h1>WELCOME TO QUICKCHECK</h1>
+        <p>
+          Check your health symptoms quickly and easily, and get simple medical advice.<br>
+          Matthew 8:16–17 — “...He took away my infirmities and bare my weaknesses.”
+        </p>
+        <a href="{{ url_for('symptoms') }}">
+            <button>Start Check</button>
+        </a>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,216 @@
+body {
+    margin: 0;
+    background-color: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+   
+}
+img{
+    width: 190px;
+    height: auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+nav ul li a{
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    background-color: #f1f5f9;
+}
+/* BACKGROUND */
+.result-hero {
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url("/static/img/background.png");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+/* DARK OVERLAY */
+.result-hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(
+        rgba(15, 23, 42, 0.85),
+        rgba(15, 23, 42, 0.4)
+    );
+}
+/* CONTENT */
+.result-container {
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.result-container h1 {
+    margin-bottom: 20px;
+}
+/* CARDS */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.card small {
+    display: block;
+    margin-top: 10px;
+    color: #cbd5f5;
+}
+/* DIFFERENT COLORS FOR SECTIONS */
+.advice {
+    border-left: 4px solid #22c55e;
+}
+
+.ai {
+    border-left: 4px solid #0ea5e9;
+}
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    background: transparent;
+    z-index: 0;
+    overflow: hidden;
+}
+.stars::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+
+    box-shadow:
+        10px 50px white,
+        80px 120px white,
+        200px 300px white,
+        400px 80px white,
+        600px 200px white,
+        900px 100px white,
+        1200px 350px white,
+        1400px 220px white,
+        1600px 400px white;
+    animation: moveStars 20s linear infinite;
+}
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: white;
+
+    box-shadow:
+        100px 300px white,
+        200px 500px white,
+        400px 150px white,
+        600px 350px white,
+        800px 250px white,
+        1000px 450px white,
+        1200px 200px white;
+
+    animation: moveStars 40s linear infinite;
+}
+.symptoms-card {
+    margin-bottom: 20px;
+}
+
+.symptom-list {
+    list-style: none;
+    padding: 0;
+}
+
+.symptom-list li {
+    background: rgba(255,255,255,0.08);
+
+    margin: 10px 0;
+    padding: 12px 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #22c55e;
+
+    backdrop-filter: blur(10px);
+    color: #e2e8f0;
+
+    font-weight: 500;
+}
+.advice-list {
+
+    list-style: none;
+
+    padding: 0;
+}
+.advice-list li {
+
+    background: rgba(255,255,255,0.08);
+
+    margin: 12px 0;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border-left: 4px solid #22c55e;
+
+    line-height: 1.7;
+
+    color: #e2e8f0;
+
+    backdrop-filter: blur(10px);
+}
+@keyframes moveStars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-1000px);
+    }
+}

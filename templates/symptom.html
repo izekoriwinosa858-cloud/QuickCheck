@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptoms Checker - QuickCheck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='symptomstyle.css') }}">
+</head>
+<body>
+     <nav>
+        <img src="{{ url_for('static', filename='img/quickcheck.png') }}">
+        <ul>
+
+            <li><a href="/">Home</a></li>
+
+            <li><a href="/symptoms">Symptoms Checker</a></li>
+
+            <li><a href="/features">Features</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+     <!-- HERO BACKGROUND -->
+    <section class="symptoms-hero">
+
+        <!-- STARS -->
+        <div class="stars"></div>
+
+        <!-- CARD -->
+        <div class="symptoms-card">
+
+            <h2>How are you feeling?</h2>
+            <p class="sub-text">Select all symptoms that apply</p>
+
+            <form action="{{ url_for('result') }}" method="POST">
+                <div class="symptom-grid">
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Vomiting">
+                       Vomiting
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Diarrhea">
+                      Diarrhea
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Stomach Pain">
+                      Stomach Pain
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Nausea">
+                      Nausea
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Fever">
+                      Fever
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Headache">
+                      Headache
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Fatigue">
+                     Fatigue
+                 </label>
+
+                 <label>
+                     <input type="checkbox" name="symptoms" value="Loss of Appetite">
+                      Loss of Appetite
+                 </label>
+
+                </div>
+                  <!-- OPTIONAL INPUT -->
+            <p class="optional-text">Optional: Describe how you feel</p>
+
+            <textarea 
+                name="extra_info"
+                placeholder="e.g. I have been feeling weak and dizzy for 2 days..."
+            ></textarea>
+           
+                <button type="submit">Get Advice</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
