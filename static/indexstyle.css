@@ -132,12 +132,7 @@ section{
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 .stars {
     position: absolute;
     width: 100%;
@@ -186,11 +181,51 @@ section{
 
     animation: moveStars 40s linear infinite;
 }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes moveStars {
     from {
         transform: translateY(0);
     }
     to {
         transform: translateY(-1000px);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    nav img {
+        width: 160px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px;
     }
 }
