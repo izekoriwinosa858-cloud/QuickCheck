@@ -1,0 +1,125 @@
+/* ================= NAVBAR ================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+
+    padding:10px 30px;
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+nav img{
+
+    width:190px;
+}
+
+/* Hide checkbox */
+
+#menu-toggle{
+
+    display:none;
+}
+
+/* Hamburger */
+
+.hamburger{
+
+    display:none;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+    color:#0f172a;
+}
+
+/* Desktop */
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:25px;
+
+    margin:0;
+
+    padding:0;
+}
+
+.nav-links li a{
+
+    text-decoration:none;
+
+    color:#0f172a;
+
+    padding:8px 12px;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.nav-links li a:hover{
+
+    background:#f1f5f9;
+}
+
+/* ================= PHONE ================= */
+
+@media (max-width:600px){
+
+    .hamburger{
+
+        display:block;
+    }
+
+    .nav-links{
+
+        display:none;
+
+        position:absolute;
+
+        top:75px;
+
+        left:0;
+
+        width:100%;
+
+        background:white;
+
+        flex-direction:column;
+
+        text-align:center;
+
+        box-shadow:0 8px 20px rgba(0,0,0,.15);
+    }
+
+    .nav-links li{
+
+        padding:15px 0;
+
+        border-bottom:1px solid #eee;
+    }
+
+    /* Checkbox controls menu */
+
+    #menu-toggle:checked ~ .nav-links{
+
+        display:flex;
+    }
+
+    nav img{
+
+        width:150px;
+    }
+}

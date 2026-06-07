@@ -7,23 +7,13 @@
 
     <link rel="stylesheet"
     href="{{ url_for('static', filename='featurestyle.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-<nav>
-    <img src="{{ url_for('static', filename='img/quickcheck.png') }}">
-
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/symptoms">Symptoms Checker</a></li>
-        <li><a href="/features">Features</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
-
+ {% include 'includes/navbar.html' %}
 
     <!-- FEATURES HERO -->
     <section class="features-hero">
