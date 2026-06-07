@@ -1,19 +1,14 @@
 /* ================= NAVBAR ================= */
-
 nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    background:white;
-
-    padding:10px 30px;
-
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 nav img{
@@ -45,33 +40,27 @@ nav img{
 
 .nav-links{
 
-    display:flex;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
 
-    list-style:none;
-
-    gap:25px;
-
-    margin:0;
-
-    padding:0;
 }
 
 .nav-links li a{
 
-    text-decoration:none;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.3s;
 
-    color:#0f172a;
-
-    padding:8px 12px;
-
-    border-radius:8px;
-
-    transition:.3s;
 }
 
 .nav-links li a:hover{
 
-    background:#f1f5f9;
+    background-color: #f1f5f9;
 }
 
 /* ================= PHONE ================= */
@@ -122,4 +111,6 @@ nav img{
 
         width:150px;
     }
+
+
 }
