@@ -1,20 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <nav>
-    <img src="{{ url_for('static', filename='img/quickcheck.png') }}">
-<!-- Hamburger Icon -->
+<nav class="navbar">
+
+    <!-- Logo -->
+    <a href="/" class="logo">
+        <img src="{{ url_for('static', filename='img/quickcheck.png') }}" alt="QuickCheck Logo">
+    </a>
+
+    <!-- Hidden Checkbox -->
+    <input type="checkbox" id="menu-toggle">
+
+    <!-- Hamburger Icon -->
     <label for="menu-toggle" class="hamburger">
-        ☰
+        <span></span>
+        <span></span>
+        <span></span>
     </label>
 
     <!-- Navigation Links -->
-    <ul class="nav-links">
+    <ul class="nav-menu">
 
         <li><a href="/">Home</a></li>
 
@@ -29,6 +31,3 @@
     </ul>
 
 </nav>
-
-</body>
-</html>
