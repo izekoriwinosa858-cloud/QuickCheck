@@ -159,3 +159,86 @@ section{
     }
 }
 
+/* Tablets */
+@media screen and (max-width:1024px){
+
+    .hero{
+
+        padding:30px;
+    }
+
+    .hero-content{
+
+        transform:none;
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+        max-width:450px;
+    }
+
+}
+
+/* Phones (iPhone, iPod, Android) */
+
+@media screen and (max-width:768px){
+
+    .hero{
+
+        height:auto;
+
+        min-height:100vh;
+
+        justify-content:center;
+
+        align-items:center;
+
+        padding:60px 20px;
+    }
+
+    .hero-content{
+
+        width:100%;
+
+        transform:none;
+
+        text-align:center;
+    }
+
+    .hero-content h1{
+
+        font-size:38px;
+
+        line-height:1.2;
+
+        margin-bottom:20px;
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+        max-width:100%;
+
+        line-height:1.7;
+    }
+
+    .hero-content button{
+
+        width:180px;
+
+        padding:14px;
+
+        font-size:18px;
+
+        margin-top:25px;
+    }
+
+}
