@@ -241,3 +241,84 @@ body {
         transform: translateY(0);
     }
 }
+
+@media screen and (max-width:1024px){
+
+    .features-hero{
+
+        padding:40px 5%;
+    }
+
+    .features-card{
+
+        padding:30px;
+    }
+
+    .features-card h1{
+
+        font-size:40px;
+    }
+
+}
+
+/* Phones (iPhone, iPod, Android) */
+
+@media screen and (max-width:768px){
+
+    .features-hero{
+
+        padding:25px 15px;
+    }
+
+    .features-card{
+
+        padding:25px 20px;
+
+        border-radius:15px;
+    }
+
+    .features-card h1{
+
+        font-size:32px;
+
+        line-height:1.3;
+
+        margin-bottom:15px;
+
+        text-align:center;
+    }
+
+    .sub-text{
+
+        font-size:16px;
+
+        margin-bottom:30px;
+
+        line-height:1.6;
+    }
+
+    .features-grid{
+
+        grid-template-columns:1fr;
+
+        gap:18px;
+    }
+
+    .feature-box{
+
+        padding:20px;
+    }
+
+    .feature-box h2{
+
+        font-size:20px;
+    }
+
+    .feature-box p{
+
+        font-size:15px;
+
+        line-height:1.6;
+    }
+
+}
