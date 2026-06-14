@@ -198,3 +198,80 @@ textarea:focus {
 textarea::placeholder {
     color: #94a3b8;
 }
+
+@media screen and (max-width:1024px){
+
+    .symptoms-card{
+
+        max-width:500px;
+    }
+
+}
+
+/* Phones */
+
+@media screen and (max-width:768px){
+
+    .symptoms-hero{
+
+        padding:30px 15px;
+
+        min-height:100vh;
+
+        align-items:flex-start;
+    }
+
+    .symptoms-card{
+
+        margin-top:30px;
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:25px;
+    }
+
+    .symptoms-card h2{
+
+        font-size:30px;
+
+        text-align:center;
+    }
+
+    .sub-text{
+
+        text-align:center;
+
+        margin-bottom:25px;
+    }
+
+    .symptom-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .symptom-grid label{
+
+        padding:15px;
+
+        font-size:17px;
+    }
+
+    textarea{
+
+        box-sizing:border-box;
+
+        height:90px;
+
+        font-size:16px;
+    }
+
+    .symptoms-card button{
+
+        padding:15px;
+
+        font-size:18px;
+    }
+
+}
